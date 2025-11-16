@@ -49,8 +49,8 @@ export function serChartData(
         }
         list.forEach((item) => {
             item.data =
-                bItems?.items[item.binance_symbol] &&
-                bItems.items[item.binance_symbol].map((cel) => {
+                bItems?.items[item.symbol] &&
+                bItems.items[item.symbol].map((cel) => {
                     return [+cel.t, +cel.p]
                 })
             item.params = bItems?.range[item.symbol] || {}
@@ -59,7 +59,7 @@ export function serChartData(
                     document.getElementById(
                         `chart${hasSame ? item.setId : item.id}`
                     )
-                   
+
                 )
             }
             const randomColor = color // 生成随机数并转换为十六进制

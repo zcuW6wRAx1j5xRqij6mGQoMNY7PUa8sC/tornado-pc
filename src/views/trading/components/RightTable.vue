@@ -33,12 +33,11 @@ function setListData (ctx) {
     sellList.value = data.asks || []
 }
 watch(
-    () => props.symbolInfo.binance_symbol,
+    () => props.symbolInfo.symbol,
     (newValue, oldValue) => {
         if(props.setSub){
-        const type = props.isSpots ? 'spot' : 'futures'
-        oldValue && props.unsubscribeChannel(`public:spot_book_${oldValue}`)
-        newValue && props.setSub(`public:spot_book_${newValue}`, setListData)
+        oldValue && props.unsubscribeChannel(`public:book_${oldValue}`)
+        newValue && props.setSub(`public:book_${newValue}`, setListData)
         }
         
     },

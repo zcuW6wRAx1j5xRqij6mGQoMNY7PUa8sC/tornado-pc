@@ -43,10 +43,10 @@ const setListData = (data) => {
 
 nextTick(() => {
     const type = props.isSpot ? "spot" : "futures"
-    props.setSub && props.setSub(`public:spot_allticker`, setListData)
+    props.setSub && props.setSub(`public:allticker`, setListData)
 })
 function getData (row, prop) {
-    let data = recordMap.value[row.binance_symbol] || {}
+    let data = recordMap.value[row.symbol] || {}
     row[prop] = +data[prop] || "-"
     const show =+data[prop] || "-"
     return show
@@ -59,18 +59,17 @@ const setInfo = (ctx) => {
     emit("changeData", singleData.value)
 }
 watch(
-    () => props.symbolInfo.binance_symbol,
+    () => props.symbolInfo.symbol,
     (newValue, oldValue) => {
-        const type = props.isSpot ? "spot" : "futures"
         // 现货
         console.log("oldValue", oldValue)
         if (oldValue) {
             // 清除上次订阅
-            props.unsubscribeChannel(`public:spot_ticker_${oldValue}`)
+            props.unsubscribeChannel(`public:ticker_${oldValue}`)
         }
         console.log("newValue", newValue)
         if (newValue) {
-            props.setSub(`public:spot_ticker_${newValue}`, setInfo)
+            props.setSub(`public:ticker_${newValue}`, setInfo)
         }
     },
     {

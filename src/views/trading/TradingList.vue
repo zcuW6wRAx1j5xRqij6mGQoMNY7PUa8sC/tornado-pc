@@ -55,11 +55,11 @@ const setListData = (data) => {
 // 优化：只在组件挂载时订阅WebSocket，组件卸载时取消订阅
 const { setSub, unsubscribeChannel } = useSocket()
 onMounted(() => {
-    setSub('public:spot_allticker', setListData)
+    setSub('public:allticker', setListData)
 })
 
 function getData (row, prop) {
-    let data = recordMap.value.get(row.binance_symbol) || {}
+    let data = recordMap.value.get(row.symbol) || {}
     row[prop] = +data[prop] || "-"
     const show = +data[prop] || "-"
     return show
@@ -129,7 +129,7 @@ const handleRowClick = ({ row }) => {
 onUnmounted(() => {
     recordMap.value.clear()
     // 取消WebSocket订阅
-    unsubscribeChannel('public:spot_allticker')
+    unsubscribeChannel('public:allticker')
 })
 </script>
 

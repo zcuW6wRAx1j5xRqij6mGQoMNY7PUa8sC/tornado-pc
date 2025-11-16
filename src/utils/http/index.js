@@ -26,7 +26,7 @@ class PureHttp {
         // 添加请求缓存相关的属性
         this.pendingRequests = new Map() // 存储待处理的请求
         this.requestCache = new Map() // 存储请求缓存
-        
+
         this.httpInterceptorsRequest()
         this.httpInterceptorsResponse()
     }
@@ -50,7 +50,7 @@ class PureHttp {
     cacheRequest(config, promise) {
         const requestKey = this.getRequestKey(config)
         this.requestCache.set(requestKey, promise)
-        
+
         // 请求完成后删除缓存
         promise.finally(() => {
             this.requestCache.delete(requestKey)
@@ -87,10 +87,10 @@ class PureHttp {
                     PureHttp.initConfig.beforeRequestCallback($config)
                     return $config
                 }
-                const lang = localStorage.getItem("language") || "de"
+                const lang = localStorage.getItem("language") || "en"
                 config.headers["Accept-Language"] = lang
                 config.headers["X-Device-Type"] = 'web'
-                
+
                 const token = localStorage.getItem("token")
                 if (token) {
                     config.headers["Authorization"] = `Bearer ${token}`
@@ -166,7 +166,7 @@ class PureHttp {
                 ) {
                     errorShow(
                         $error.response.data["msg"] ||
-                            $error.response.data["message"]
+                        $error.response.data["message"]
                     )
                 }
                 // 所有的响应异常 区分来源为取消请求/非取消请求

@@ -9,7 +9,7 @@ const recordMap = ref({})
 const setListData = data => {
     recordMap.value[data.data.symbol] = data.data
 }
-useSocket('public:spot_allticker', setListData)
+useSocket('public:allticker', setListData)
 function getData(row, prop, needSymbol = false) {
     let data = recordMap.value[row.symbol] || {}
     row[prop] = +data[prop] || 0

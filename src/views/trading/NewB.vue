@@ -20,7 +20,7 @@ const setListData = data => {
 }
 
 function getData(row, prop) {
-    let data = recordMap.value[row.binance_symbol] || {}
+    let data = recordMap.value[row.symbol] || {}
     row[prop] = +data[prop] || '-'
     const show = +data[prop] || '-'
     return show
@@ -28,13 +28,13 @@ function getData(row, prop) {
 const typeActiveTab = ref('spot')
 const action = ref(getSpotListApi)
 const tableParams = reactive({ coin_type: 'new' })
-const { setSub, unsubscribeAll } = useSocket('public:spot_allticker', setListData)
+const { setSub, unsubscribeAll } = useSocket('public:allticker', setListData)
 const typeTabChange = id => {
     typeActiveTab.value = id
     action.value = typeActiveTab.value === 'spot' ? getSpotListApi : getContractListApi
     tableSearch.value = !tableSearch.value
     unsubscribeAll()
-    setSub(`public:spot_allticker`, setListData)
+    setSub(`public:allticker`, setListData)
 }
 const handleCellClick = (row) => {
     router.push({

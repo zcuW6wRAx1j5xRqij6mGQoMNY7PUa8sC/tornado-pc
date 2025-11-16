@@ -196,11 +196,10 @@ function getHisData () {
         })
 }
 watch(
-    () => props.symbolInfo.binance_symbol,
+    () => props.symbolInfo.symbol,
     (newVal, oldVal) => {
-        const type = props.isSpot ? "spot" : "futures"
-        oldVal && props.unsubscribeChannel(`public:spot_kline_${oldVal}`)
-        newVal && props.setSub(`public:spot_kline_${newVal}`, setInfo)
+        oldVal && props.unsubscribeChannel(`public:kline_${oldVal}`)
+        newVal && props.setSub(`public:kline_${newVal}`, setInfo)
         newVal && getHisData()
     },
     { immediate: true }

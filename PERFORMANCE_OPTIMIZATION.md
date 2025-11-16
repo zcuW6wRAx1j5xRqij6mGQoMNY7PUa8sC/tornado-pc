@@ -11,7 +11,7 @@
 - **影响**: 初始渲染慢，内存占用高，表格渲染性能差
 
 ### 3. 实时数据更新频繁
-- **问题**: WebSocket 订阅 `public:spot_allticker` 频道，频繁更新所有交易对价格
+- **问题**: WebSocket 订阅 `public:allticker` 频道，频繁更新所有交易对价格
 - **影响**: 表格不断重新渲染，性能消耗大
 
 ### 4. 搜索功能性能问题
@@ -27,15 +27,15 @@
 ### 1. WebSocket 连接优化
 ```javascript
 // 优化前
-useSocket('public:spot_allticker', setListData)
+useSocket('public:allticker', setListData)
 
 // 优化后
 const { setSub, unsubscribeChannel } = useSocket()
 onMounted(() => {
-    setSub('public:spot_allticker', setListData)
+    setSub('public:allticker', setListData)
 })
 onUnmounted(() => {
-    unsubscribeChannel('public:spot_allticker')
+    unsubscribeChannel('public:allticker')
 })
 ```
 

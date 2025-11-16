@@ -16,7 +16,7 @@ const recordMap = ref({})
 const setListData = (data) => {
     recordMap.value[data.data.symbol] = data.data
 }
-useSocket("public:spot_allticker", setListData)
+useSocket("public:allticker", setListData)
 const count = computed(() => {
     if (!fromData.coin_id) return 0
     return divide(fromData.usdc_amount, recordMap.value[fromData.coin_symbol]?.price)

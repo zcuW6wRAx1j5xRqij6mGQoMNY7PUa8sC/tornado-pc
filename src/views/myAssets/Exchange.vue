@@ -45,7 +45,7 @@ const setListData = data => {
 // 优化：只在组件挂载时订阅WebSocket，组件卸载时取消订阅
 const { setSub, unsubscribeChannel } = useSocket()
 onMounted(() => {
-    setSub('public:spot_allticker', setListData)
+    setSub('public:allticker', setListData)
 })
 
 const errorObj = ref({})
@@ -234,7 +234,7 @@ const emit = defineEmits(['success'])
 
 onUnmounted(() => {
     // 取消WebSocket订阅
-    unsubscribeChannel('public:spot_allticker')
+    unsubscribeChannel('public:allticker')
 })
 </script>
 

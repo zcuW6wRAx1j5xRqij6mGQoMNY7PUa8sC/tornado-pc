@@ -1,0 +1,258 @@
+:root {
+    --el-color-primary: #0caf60 !important;
+    --el-color-primary-light-3: #0caf60;
+    --el-color-primary-dark-2: #0caf60;
+    --el-color-primary-light-5: #0caf60;
+    --el-border-color: #dddddd;
+    --el-disabled-bg-color: #dee0e4;
+    --el-color-warning: #ffa96a;
+    --el-messagebox-color: #ffa96a;
+    --Neutral-60: #9098a2;
+}
+/* dark.scss */
+$--color-primary: #1f2d3d;
+$--color-success: #67c23a;
+$--color-warning: #e6a23c;
+$--color-danger: #f56c6c;
+$--color-info: #909399;
+
+$--background-color: #303133;
+$--text-color-primary: #ffffff;
+$--text-color-secondary: #c0c4cc;
+$--border-color-base: #d3d3d3;
+#app,
+.app {
+    .el-button--primary {
+        background-color: var(--el-color-primary);
+    }
+    input::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: var(--Neutral-60);
+    }
+    input:-moz-placeholder {
+        /* Firefox 18- */
+        color: var(--Neutral-60);
+    }
+    input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: var(--Neutral-60);
+    }
+    input:-ms-input-placeholder {
+        /* IE 10+ */
+        color: var(--Neutral-60);
+    }
+    textarea::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: var(--Neutral-60);
+    }
+    textarea:-moz-placeholder {
+        /* Firefox 18- */
+        color: var(--Neutral-60);
+    }
+    textarea::-moz-placeholder {
+        /* Firefox 19+ */
+        color: var(--Neutral-60);
+    }
+    textarea:-ms-input-placeholder {
+        /* IE 10+ */
+        color: var(--Neutral-60);
+    }
+    // .el-select__selected-item{
+    //     color: #fff;
+    // }
+    .el-slider__runway {
+        background-color: #212a36;
+    }
+    .el-select__placeholder {
+        color: #fff;
+    }
+    .el-select__placeholder.is-transparent {
+        color: var(--Neutral-60);
+    }
+    .el-select__wrapper {
+        background-color: #12181f;
+        border: none;
+        box-shadow: none;
+    }
+    .el-input-group__prepend {
+        box-shadow: none;
+        background-color: #1c1e27;
+    }
+    .el-select--large .el-select__wrapper {
+        height: 64px;
+        border-radius: 20px;
+    }
+    .vxe-loading--text {
+        display: none;
+    }
+    .el-table--empty-content {
+        display: none;
+    }
+    .vxe-pager {
+        background-color: #222631;
+    }
+    .vxe-pager--prev-btn,
+    .vxe-pager--next-btn {
+        background-color: #2d333f !important;
+        border-color: #2d333f !important;
+        color: #fff !important;
+    }
+    .el-button--primary:hover,
+    .el-button--primary.is-disabled,
+    .el-button--primary.is-disabled:hover {
+        opacity: 0.8;
+        background-color: var(--el-color-primary) !important;
+    }
+    .el-dialog {
+        .el-select__wrapper {
+            height: 40px;
+            background-color: #12181f;
+            border: none;
+            box-shadow: none;
+            margin-bottom: 16px;
+        }
+    }
+    .dialog-body {
+        color: #fff;
+    }
+
+    .el-dialog {
+        background: var(--body-bg);
+        margin-top: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 8px;
+        font-size: 15px;
+        min-width: 300px;
+    }
+
+    .el-dialog__header {
+        text-align: center;
+        padding-left: 32px;
+    }
+
+    .el-dialog__title {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .el-dialog__footer {
+        text-align: center;
+    }
+    .el-table__body tr.hover-row > td.el-table__cell,
+    .el-table th.el-table__cell,
+    .el-table tr,
+    .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+        background-color: #161d26 !important;
+    }
+    .el-table th.el-table__cell.is-leaf {
+        border-bottom: 1px solid #242d39;
+        border-top: 1px solid #242d39;
+    }
+    .el-table td.el-table__cell {
+        border: none;
+    }
+    .el-table .el-table__cell {
+        padding: 16px 0;
+    }
+    .el-loading-mask,
+    .el-dropdown__popper.el-popper {
+        background-color: var(--body-bg);
+    }
+    .el-table .cell {
+        color: #fff;
+    }
+    .el-table th .cell {
+        color: #fff;
+        font-size: 12px;
+    }
+    .el-table .el-table__cell.is-right {
+        font-family: DIN;
+    }
+    .el-slider__stop {
+        background-color: var(--el-color-primary);
+    }
+    .el-slider__button {
+        height: 16px;
+        width: 16px;
+    }
+    .el-pager li, .btn-next, .btn-prev {
+        width: 50px;
+        height: 50px;
+        background: #161d26;
+        border: 1px solid #303a46;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .el-icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &.is-active{
+            background: #0caf60;
+            border: 1px solid #0caf60;
+        }
+    }
+    .el-select .el-select__caret{
+        width: 28px;
+        height: 28px;
+        background-color:#161D26;
+        color: #fff;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+    .el-select--large .el-select__caret{
+        width: 44px;
+        height: 44px;
+        background-color:#161D26;
+        color: #fff;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+}
+.el-loading-spinner .path {
+    stroke: #0f7dff;
+}
+.from-label {
+    font-weight: 500;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.el-dropdown__popper.el-popper,
+.el-dropdown-menu {
+    background-color: var(--body-bg) !important;
+}
+.el-dropdown-menu__item {
+    color: #ffffff !important;
+    font-size: 14px !important;
+}
+.el-dropdown__popper.el-popper,
+.el-dropdown__popper.el-popper .el-popper__arrow:before,
+.el-popover.el-popper,
+.el-popper.is-light,
+.el-popper.is-light > .el-popper__arrow:before {
+    border-color: var(--body-bg) !important;
+}
+.el-popper__arrow,
+.el-popper.is-light,
+.el-popper.is-light > .el-popper__arrow:before {
+    background: var(--body-bg) !important;
+}
+.el-popover.el-popper {
+    color: #fff !important;
+}
+.el-table__cell:first-child {
+    padding-left: 24px !important;
+}
+
+
+.el-dialog__headerbtn .el-dialog__close{
+    color: #fff !important;
+}

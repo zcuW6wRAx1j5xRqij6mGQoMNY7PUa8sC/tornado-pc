@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'PingFang SC';
+    src: url('https://s3.coinvitax.com/source/PingFang.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DIN';
+    src: url('./DIN-Medium-2.otf');
+    font-weight: normal;
+    font-style: normal;
+}

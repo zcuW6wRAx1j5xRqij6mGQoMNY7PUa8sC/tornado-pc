@@ -1,0 +1,10 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Notification">
+<rect id="BG" width="60" height="60" rx="20" fill="#161D26"/>
+<g id="Notification_2">
+<g id="Notification-Icon">
+<path id="Vector" d="M23 36H37V29.031C37 25.148 33.866 22 30 22C26.134 22 23 25.148 23 29.031V36ZM30 20C34.97 20 39 24.043 39 29.031V38H21V29.031C21 24.043 25.03 20 30 20ZM27.5 39H32.5C32.5 39.663 32.2366 40.2989 31.7678 40.7678C31.2989 41.2366 30.663 41.5 30 41.5C29.337 41.5 28.7011 41.2366 28.2322 40.7678C27.7634 40.2989 27.5 39.663 27.5 39Z" fill="white"/>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,97 @@
+.login-body {
+    margin-top: 48px;
+    width: 1063px;
+    height: 782px;
+    background: #0B0E13;
+    border-radius: 36px;
+    padding: 24px;
+    display: flex;
+}
+
+.top-header {
+    position: absolute;
+    flex-shrink: 0;
+    top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 60px;
+}
+
+.from-box {
+    padding-top: 115px;
+    width: 450px;
+    padding: 70px;
+    border-radius: 33px 33px 33px 33px;
+    background-color: #12181F;
+    height: 100%;
+}
+
+.login-page {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-left {
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.login-title {
+    color: #fff;
+    font-family: 'PingFang SC';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    /* 91.667% */
+    margin-bottom: 36px;
+}
+
+.remember-pwd {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+    color: #fff;
+    font-family: 'PingFang SC';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.tip-forget-pwd {
+    color: #fff;
+    font-family: 'PingFang SC';
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.tip-font {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cf-turnstile {
+    width: 400px;
+}
+:deep(.show-language) {
+   background: #12181F;
+}
+.login-bg{
+    width: 437px;
+    height: 386px;
+    margin-top: 85px;
+}
+.logo{
+    width: 44px;
+    height: 44px;
+}
+.text-logo{
+    margin-left: 10px;
+}

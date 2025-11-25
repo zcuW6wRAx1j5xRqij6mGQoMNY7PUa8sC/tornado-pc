@@ -145,8 +145,9 @@ const changePhoneCode = (value) => {
             </div>
             <div class="flex-auto flex flex-col justify-center items-center">
                 <div class="flex items-center">
-                    <img src="/logo.svg" alt="" class="logo">
-                    <img src="/text.svg" alt="" class="text-logo">
+                    <img src="/logo.svg"  alt="" class="logo">
+                    <div class="text-logo">Nvdx</div>
+                    <!-- <img src="/text.svg" alt="" class="text-logo"> -->
                 </div>
                 <img src="./img/login-right.png" class="login-bg" alt="">
             </div>
@@ -156,4 +157,14 @@ const changePhoneCode = (value) => {
 
 <style scoped>
 @import './login.scss';
+.logo{
+    width: 70px;
+    height: auto;
+}
+.text-logo{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
 </style>

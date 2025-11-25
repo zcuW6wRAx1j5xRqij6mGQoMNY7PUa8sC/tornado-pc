@@ -47,7 +47,7 @@ export default {
             subTitle:
                 'Unser Handelserlebnis ist auf den beliebtesten Geräten und Plattformen verfügbar',
             text1: 'Handeln mit Smartphone oder Tablet',
-            text2: 'Um den sichersten und nahtlosesten Handel zu bieten, ist CoinVitaX jetzt auf allen bevorzugten Geräten verfügbar',
+            text2: 'Um den sichersten und nahtlosesten Handel zu bieten, ist Nvdx jetzt auf allen bevorzugten Geräten verfügbar',
             text3: 'API-Ökosystem',
             text4: 'Um ein integratives Ökosystem zu schaffen, bieten wir Entwicklern alle Tools, um unsere Dienste in jede gewünschte Plattform zu integrieren',
         },
@@ -766,7 +766,7 @@ export default {
             title1: 'Über uns',
             title2: 'Nutzungsvereinbarung',
             title3: 'Datenschutzrichtlinie',
-            tip: '2025 CoinVitaX Alle Rechte vorbehalten',
+            tip: '2025 Nvdx Alle Rechte vorbehalten',
         },
         qa: {
             title: 'Häufig gestellte Fragen',
